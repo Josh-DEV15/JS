@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="jpn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Click the button to change box color</h2>
+    <div id="colorbox" style="width: 150px; height:150px; background-color: skyblue "></div>
+    <button id="changebtn">Change color</button>
+
+    <script>
+
+        const box = document.getElementById("colorbox");
+        const btn = document.getElementById("changebtn");
+
+        btn.addEventListener("click", function() {
+
+            const colors = ["red", "green", "blue", "purple", "orange"];
+
+            box.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        });
+    </script>
+</body>
+</html>

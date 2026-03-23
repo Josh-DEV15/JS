@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Styling Example</title>
+</head>
+
+<body id="const">
+    <h2>What Can JavaScript Do on A Web page?</h2>
+
+    <p id="demo">JavaScript can dynamically update the appearance of this text</p>
+
+    <button onclick="changeColor()">Click Me</button>
+
+    <script>
+        function changeColor() {
+            document.getElementById('demo').style.color = 'blue';
+            document.getElementById('demo').style.fontSize = '30px';
+            document.getElementById('demo').innerHTML = "Python";
+            document.getElementById('const').style.backgroundColor = 'black';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,7 +1,7 @@
 class Phone {
     constructor(brand, model, year){
-        this.brand = "brand";
-        this.model = "model";
+        this.brand = brand;
+        this.model = model;
         this.year = year;
     }
     getAge (){
