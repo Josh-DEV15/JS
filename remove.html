@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remove List Item</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 60px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      width: 200px;
+      margin: auto;
+    }
+    li {
+      background-color: #f3f3f3;
+      padding: 10px;
+      margin: 5px 0;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    li:hover {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <h2>Click any item to remove it</h2>
+  <ul id="List">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Orange</li>
+    <li>Grape</li>
+    <li>Watermelon</li>
+  </ul>
+
+  <script>
+    const List = document.getElementById('List');
+
+    List.addEventListener('click', (e) => {
+      if (e.target.tagName === 'LI') {
+        e.target.remove();
+      }
+    });
+  </script>
+</body>
+</html>
