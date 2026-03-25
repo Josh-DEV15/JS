@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    button {
+        font-size: 18px;
+        margin: 10px;
+        padding: 10px 20px;
+    }
+    
+</style>
+<body>
+    <h1>ATM System</h1>
+    <button onclick="checkBalance()">Check Balance</button>
+    <button onclick="withdraw()">Withdraw</button>
+    <button onclick="deposit()">Deposit</button>
+    <button onclick="exit()">Exit</button>
+
+    <script>
+         const accountBalance = 1000;
+
+function checkBalance() {
+    alert(`Your current balance is $${accountBalance}.`);
+} 
+function withdraw() {
+    const amount = parseFloat(prompt("Enter the amount to withdraw:"));
+    if (amount > 0 && amount <= accountBalance) {
+        accountBalance -= amount;
+        alert(`You have withdrawn $${amount}. Your new balance is $${accountBalance}.`);
+    } else {
+        alert("Invalid amount or insufficient funds.");
+    }
+}
+function deposit() {
+    const amount = parseFloat(prompt("Enter the amount to deposit:"));
+    if (amount > 0) {
+        accountBalance += amount;
+        alert(`You have deposited $${amount}. Your new balance is $${accountBalance}.`);
+    } else {
+        alert("Invalid amount.");
+    }   
+}
+function exit() {
+    alert("Thank you for using our ATM. Goodbye!");
+}
+
+    </script>
+</body>
+</html>
